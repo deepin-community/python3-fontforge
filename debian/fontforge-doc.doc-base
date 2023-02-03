@@ -1,0 +1,9 @@
+Document: fontforge
+Title: FontForge Manual
+Author: The Fontforge Project Authors
+Abstract: FontForge user manual
+Section: Graphics
+
+Format: HTML
+Index: /usr/share/doc/fontforge/index.html
+Files: /usr/share/doc/fontforge/*.html

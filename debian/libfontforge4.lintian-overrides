@@ -1,0 +1,2 @@
+# upstream says /* I documented this member with the wrong spelling... so support it */
+libfontforge4: spelling-error-in-binary usr/lib/*/libfontforge.so.4 persistant persistent

@@ -1,0 +1,26 @@
+Description: Use packaged copy of MathJax from libjs-mathjax
+ FontForge documentation uses sphinx.ext.mathjax which insert script links
+ to MathJax served on remote CDNs.
+ .
+ This patch, together with debian/fontforge-doc.links, replaces remote
+ scripts with MathJax from the libjs-mathjax package.
+ See https://bugs.debian.org/739300 for discussion.
+ .
+ Fixes Lintian privacy-breach-generic warnings.
+Author: Anthony Fok <foka@debian.org>
+Origin: vendor
+Forwarded: not-needed
+Last-Update: 2020-11-24
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/doc/sphinx/conf.py
++++ b/doc/sphinx/conf.py
+@@ -68,6 +68,8 @@
+ # Don't copy source rst files into the output
+ html_copy_source = False
+ 
++mathjax_path = 'mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
++
+ # Set the main page
+ master_doc = 'index'
+ 

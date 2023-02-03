@@ -1,22 +1,731 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: template-repository
-Source: https://github.com/deepin-community/template-repository
+Upstream-Name: FontForge
+Upstream-Contact: https://twitter.com/fontforge
+ https://github.com/fontforge/fontforge
+License-Grant:
+ FontForge is available as a whole under the terms of the
+ [GNU GPL](http://www.gnu.org/copyleft/gpl.html), version 3 or any later
+ version.
+License: GPL-3+
+Source: https://github.com/fontforge/fontforge
+ Repackaged, excluding potentially non-DFSG files.
+  * Binary code potentially linked against non-free Macintosh libraries.
+    libraries.
+  * Non-DFSG free fonts
+Files-Excluded:
+ osx/FontForge.app/Contents/*
+ tests/fonts/dvng10a-crash.sfd
+ tests/fonts/ecrm1000.pfb
+ tests/fonts/Hinting.sfd
+ tests/fonts/QuadraticConversionBug.sfd
 
 Files: *
-Copyright: 2023 Tsic404 <liuheng@deepin.org>
+Copyright:
+  2014, Abel Cheung
+  2000-2012, Alexey Kryukov
+  2012, Barry Schwartz
+  2012-2014, Ben Martin
+  2000-2019, FontForge developers
+  1988,2000-2014, George Williams <gww@silcom.com>
+  2016, Gioele Barabucci
+  2008, Hiran
+  2016,2020, Jeremy Tan
+  2013,2016,2018, Jose Da Silva <digital@joescat.com>
+  2002, KANOU Hiroki
+  2012-2013, Khaled Hosny
+  2013, Matthew Skala
+  2000-2012 Michał Nowakowski
+  2011, Rafael Ferran i Peralta
+  2014, Reuben Thomas <rrt@sc3d.org>
+  2019, Skef Iterum
+License: BSD-3-clause
+
+Files:
+ fontforge/woff2.cc
+ gdraw/ggdkcocoa.m
+ gdraw/ggdkdraw.c
+ gdraw/ggdkdrawP.h
+ gdraw/ggdkdrawlogger.c
+ tests/systestdriver.c
+Copyright: 2016,2018-2019, Jeremy Tan
+License: BSD-2-clause~Author
+
+Files:
+ Packaging/debian/*
+Copyright:
+  2006-2019, Debian Fonts Task Force <pkg-fonts-devel@lists.alioth.debian.org>
 License: GPL-2+
- This package is free software; you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 2 of the License, or
- (at your option) any later version.
+
+Files:
+ fontforgeexe/fontlint.pe
+ fontforgeexe/sfundo.c
+ fontforgeexe/sfundo.h
+ fontforgeexe/wordlistparser.*
+ inc/ffglib.h
+Copyright:
+  2013, Ben Martin
+  2013, Matthew Skala
+  2014-2015, the FontForge Project Developers
+License-Grant:
+ FontForge is free software:
+ you can redistribute it and/or modify it
+ under the terms of the GNU General Public License
+ as published by the Free Software Foundation,
+ either version 3 of the License,
+ or (at your option) any later version.
+License: GPL-3+
+
+Files:
+ fontforgeexe/pixmaps/tango/Cantarell-*.ttf
+Copyright:
+  2009, Dave Crossland <dave@lab6.com>
+License-Grant:
+ This font is free software:
+ you can redistribute it and/or modify it
+ under the terms of the GNU General Public License
+ as published by the Free Software Foundation,
+ either version 3 of the License,
+ or (at your option) any later version.
+License: GPL-3+ with font exception
+ As a special exception,
+ if you create a document which uses this font,
+ and embed this font or unaltered portions of this font
+ into the document,
+ this font does not by itself cause the resulting document
+ to be covered by the GNU General Public License.
+ This exception does not however invalidate any other reasons
+ why the document might be covered
+ by the GNU General Public License.
+ If you modify this font,
+ you may extend this exception to your version of the font,
+ but you are not obligated to do so.
+ If you do not wish to do so,
+ delete this exception statement from your version.
+
+Files:
+ pycontrib/FontCompare/fc/*.py
+ pycontrib/FontCompare/fontcompare
+ pycontrib/FontCompare/setup.py
+ pycontrib/FontCompare/unittests/unittests.py
+Copyright:
+  2013, Mayank Jha <mayank25080562@gmail.com>
+License-Grant:
+ This library is free software;
+ you can redistribute it and/or modify it
+ under the terms of the GNU Lesser General Public License
+ as published by the Free Software Foundation;
+ either version 2.1 of the License,
+ or (at your option) any later version.
+License: LGPL-2.1+
+
+Files:
+ fontforgeexe/cvdebug.c
+ fontforgeexe/cvdgloss.c
+ fontforgeexe/cvgridfit.c
+Copyright:
+  2001-2012, George Williams
+License: BSD-3-clause~typo
+
+Files:
+ pycontrib/svg2sfd.py
+Copyright:
+  2013, Google Inc.
+License-Grant:
+ Licensed under the Apache License,
+ Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License
+ at <http://www.apache.org/licenses/LICENSE-2.0>
+License: Apache-2.0
+
+Files:
+ cmake/packages/FindCairo.cmake
+ cmake/packages/FindGLIB.cmake
+Copyright:
+  2012, Raphael Kubo da Costa <rakuco@webkit.org>
+License: BSD-2-clause
+
+Files:
+ inc/gkeysym.h
+Copyright:
+  1987, Digital Equipment Corporation, Maynard, Massachusetts
+  1987,1994,1998, The Open Group
+License: X11~TOG and Expat~Digital
+Comment:
+ Included text contains no permissions,
+ only copyright and disclaimers.
+ That seems to be an editorial error, however:
+ The code apparently originates from file keysymdef.h
+ in X11 code predating XFree86 or Xorg.
+ Referenced complete license was revived in Xorg project at
+ <https://cgit.freedesktop.org/xorg/proto/x11proto/commit/keysymdef.h?id=ee0a1a4>.
+
+Files:
+ fontforge/fvimportbdf.c
+ gdraw/fontP.h
+Copyright:
+ 2000-2012, George Williams
+ 1985-1987,1991,1998, The Open Group
+License: BSD-3-clause and X11~TOG
+Comment:
+ Included text contains no permissions,
+ only copyright and disclaimers.
+ That seems to be an editorial error, however:
+ The code apparently originates from file Xlib.h
+ in X11 code predating XFree86 or Xorg.
+ Referenced complete license was revived in Xorg project at
+ <https://cgit.freedesktop.org/xorg/lib/libX11/commit/include/X11/Xlib.h?id=deae12c>.
+
+Files:
+ fontforge/bezctx_ff.*
+Copyright:
+  2007, George Williams
+  2007, Raph Levien
+License-Grant:
+ This program is free software;
+ you can redistribute it and/or modify it
+ under the terms of the GNU General Public License
+ as published by the Free Software Foundation;
+ either version 2 of the License,
+ or (at your option) any later version.
+License: GPL-2+
+
+Files:
+ tests/fonts/NimbusLGCUni-Regular.sfd
+ tests/fonts/n019003l.pfb
+Copyright:
+  2005, Alexey Kryukov
+  2001, Dmitry 40in
+  1996-1997, The Omega Project
+  1999, (URW)++ Design & Development
+  2001-2005, Valek Filippov
+License-Grant:
+ This font is free software;
+ you can redistribute it and/or modify it
+ under the terms of the GNU General Public License
+ as published by the Free Software Foundation;
+ either version 2 of the License,
+ or (at your option) any later version.
+License: GPL-2+ with font exception
+ As a special exception,
+ permission is granted to include these font programs
+ in a Postscript or PDF file that consists of a document
+ that contains text to be displayed or printed
+ using these fonts,
+ regardless of the conditions or license
+ applying to the document itself.
+
+Files:
+ tests/test926.py
+Copyright:
+  2012, W3C(R) (MIT, ERCIM, Keio, Beihang)
+License: W3C
+
+Files:
+ pycontrib/FontCompare/unittests/lohit.ttf
+Copyright:
+  2011, Lohit Fonts Project contributors <http://fedorahosted.org/lohit>
+License-Grant:
+ Licensed under the SIL Open Font License 1.1
+ (see file OFL.txt)
+License: OFL-1.1
+
+Files:
+ tests/fonts/NotoSerifTibetan-Regular.ttf
+Copyright:
+  2018, Google Inc.
+License-Grant:
+ This Font Software is licensed
+ under the SIL Open Font License, Version 1.1.
+License: OFL-1.1
+
+Files:
+ tests/fonts/cmbsy10.pfb
+Copyright:
+  1997,2009, American Mathematical Society <http://www.ams.org/>
+License-Grant:
+ This Font Software is licensed
+ under the SIL Open Font License, Version 1.1.
+ This license is in the accompanying file OFL.txt,
+ and is also available with a FAQ at:
+ <http://scripts.sil.org/OFL>.
+License: OFL-1.1
+
+Files:
+ fontforgeexe/pixmaps/tango/Inconsolata-Bold.ttf
+Copyright:
+  2006,2011, Raph Levien <firstname.lastname@gmail.com>
+License-Grant:
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License
+ at <http://www.apache.org/licenses/LICENSE-2.0>.
+License: Apache-2.0
+
+Files:
+ fontforgeexe/pixmaps/tango/Inconsolata-Regular.ttf
+Copyright:
+  2011-2012, Cyreal <http://cyreal.org/>
+  2006-2012, Raph Levien <firstname.lastname@gmail.com>
+License-Grant:
+ This Font Software is licensed
+ under the SIL Open Font License, Version 1.1.
+License: OFL-1.1
+
+Files:
+ tests/fonts/DejaVuSerif.sfd
+Copyright:
+  2003, Bitstream, Inc.
+License: DejaVu
+
+Files:
+ tests/fonts/Ambrosia*.sfd
+Copyright:
+  1987-1998, George Williams
+License: BSD-2-clause
+Comment:
+ Content lacks copyright and license.
+ Assumed to be the same font as represented at
+ <https://web.archive.org/web/20050305135628/http://bibliofile.mc.duke.edu:80/gww/fonts/Ambrosia/Ambrosia.html>
+ with same copyright holder as main upstream author of Fontforge.
+ Licensing assumed to be same as generally used for Fontforge.
+
+Files:
+ desktop/org.fontforge.FontForge.appdata.xml.in
+Copyright:
+  2014, Jose Da Silva <digital@joescat.com> 
+License: CC0-1.0
+
+Files:
+ debian/*
+Copyright:
+  2020, Anthony Fok <foka@debian.org>
+  2001, Baruch Even <baruch@debian.org>
+  2013, Hideki Yamane <henrich@debian.org>
+  2016-2017,2020, Jonas Smedegaard <dr@jones.dk>
+  2006, Kęstutis Biliūnas <kebil@kaunas.init.lt>
+  2020, Purism, SPC
+  2016, Vasudev Kamath <vasudev@copyninja.info>
+License: GPL-3+
+
+License: Apache-2.0
+License-Reference: /usr/share/common-licenses/Apache-2.0
+
+License: BSD-2-clause
+ Redistribution and use in source and binary forms,
+ with or without modification,
+ are permitted
+ provided that the following conditions are met:
  .
- This package is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
+  1. Redistributions of source code must retain
+     the above copyright notice, this list of conditions
+     and the following disclaimer.
  .
- You should have received a copy of the GNU General Public License
- along with this program. If not, see <https://www.gnu.org/licenses/>
+  2. Redistributions in binary form must reproduce
+     the above copyright notice, this list of conditions
+     and the following disclaimer
+     in the documentation and/or other materials
+     provided with the distribution.
  .
- On Debian systems, the complete text of the GNU General
- Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ AND ANY EXPRESS OR IMPLIED WARRANTIES,
+ INCLUDING, BUT NOT LIMITED TO,
+ THE IMPLIED WARRANTIES OF MERCHANTABILITY
+ AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED.
+ IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+ FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,
+ OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO,
+ PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS;
+ OR BUSINESS INTERRUPTION)
+ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE)
+ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: BSD-2-clause~Author
+ Redistribution and use in source and binary forms,
+ with or without modification,
+ are permitted
+ provided that the following conditions are met:
+ .
+ Redistributions of source code must retain
+ the above copyright notice, this list of conditions
+ and the following disclaimer.
+ .
+ Redistributions in binary form must reproduce
+ the above copyright notice, this list of conditions
+ and the following disclaimer
+ in the documentation and/or other materials
+ provided with the distribution.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE AUTHOR "AS IS"
+ AND ANY EXPRESS OR IMPLIED WARRANTIES,
+ INCLUDING, BUT NOT LIMITED TO,
+ THE IMPLIED WARRANTIES OF MERCHANTABILITY
+ AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED.
+ IN NO EVENT SHALL THE AUTHOR BE LIABLE
+ FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,
+ OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO,
+ PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS;
+ OR BUSINESS INTERRUPTION)
+ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE)
+ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: BSD-3-clause
+ Redistribution and use in source and binary forms,
+ with or without modification,
+ are permitted
+ provided that the following conditions are met:
+ .
+ Redistributions of source code must retain
+ the above copyright notice, this list of conditions
+ and the following disclaimer.
+ .
+ Redistributions in binary form must reproduce
+ the above copyright notice, this list of conditions
+ and the following disclaimer
+ in the documentation and/or other materials
+ provided with the distribution.
+ .
+ The name of the author may not be used
+ to endorse or promote products derived from this software
+ without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE AUTHOR "AS IS"
+ AND ANY EXPRESS OR IMPLIED WARRANTIES,
+ INCLUDING, BUT NOT LIMITED TO,
+ THE IMPLIED WARRANTIES OF MERCHANTABILITY
+ AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED.
+ IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT,
+ INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO,
+ PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS;
+ OR BUSINESS INTERRUPTION)
+ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE)
+ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: BSD-3-clause~typo
+ Redistribution and use in source and binary forms,
+ with or without modification,
+ are permitted
+ provided that the following conditions are met:
+ .
+ Redistributions of source code must retain
+ the above copyright notice, this list of conditions
+ and the following disclaimer.
+ .
+ Redistributions in binary form must reproduce
+ the above copyright notice, this list of conditions
+ and the following disclaimer
+ in the documentation and/or other materials
+ provided with the distribution.
+ .
+ The name of the author may not be used
+ to endorse or promote products dercved from this software
+ without specific prior written permission.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE AUTHOR "AS IS"
+ AND ANY EXPRESS OR IMPLIED WARRANTIES,
+ INCLUDING, BUT NOT LIMITED TO,
+ THE IMPLIED WARRANTIES OF MERCHANTABILITY
+ AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED.
+ IN NO EVENT SHALL THE AUTHOR BE LIABLE
+ FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,
+ OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO,
+ PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS;
+ OR BUSINESS INTERRUPTION)
+ HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE)
+ ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+License: CC0-1.0
+License-Reference: /usr/share/common-licenses/CC0-1.0
+
+License: DejaVu
+ Copyright (c) 2003 by Bitstream, Inc. All Rights Reserved.
+ Bitstream Vera is a trademark of Bitstream, Inc.
+ .
+ Permission is hereby granted, free of charge,
+ to any person obtaining a copy
+ of the fonts accompanying this license ("Fonts")
+ and associated documentation files (the "Font Software"),
+ to reproduce and distribute the Font Software,
+ including without limitation the rights
+ to use, copy, merge, publish, distribute, and/or sell
+ copies of the Font Software,
+ and to permit persons
+ to whom the Font Software is furnished to do so,
+ subject to the following conditions:
+ .
+ The above copyright and trademark notices and this permission notice
+ shall be included in all copies
+ of one or more of the Font Software typefaces.
+ .
+ The Font Software may be modified, altered, or added to,
+ and in particular the designs of glyphs or characters in the Fonts
+ may be modified and additional glyphs
+ or characters may be added to the Fonts,
+ only if the fonts are renamed
+ to names not containing
+ either the words "Bitstream" or the word "Vera".
+ .
+ This License becomes null and void to the extent applicable
+ to Fonts or Font Software that has been modified and is distributed
+ under the "Bitstream Vera" names.
+ .
+ The Font Software may be sold as part of a larger software package
+ but no copy of one or more of the Font Software typefaces
+ may be sold by itself.
+ .
+ THE FONT SOFTWARE IS PROVIDED "AS IS",
+ WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+ INCLUDING BUT NOT LIMITED TO ANY WARRANTIES
+ OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE
+ AND NONINFRINGEMENT OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT.
+ IN NO EVENT SHALL BITSTREAM OR THE GNOME FOUNDATION BE LIABLE
+ FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL,
+ OR CONSEQUENTIAL DAMAGES,
+ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ ARISING FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE
+ OR FROM OTHER DEALINGS IN THE FONT SOFTWARE.
+ .
+ Except as contained in this notice,
+ the names of Gnome, the Gnome Foundation, and Bitstream Inc.,
+ shall not be used in advertising or otherwise
+ to promote the sale, use or other dealings in this Font Software
+ without prior written authorization
+ from the Gnome Foundation or Bitstream Inc., respectively.
+ For further information, contact: fonts at gnome dot org.
+
+License: Expat~Digital
+ Permission to use, copy, modify, and distribute 
+ this software and its documentation
+ for any purpose and without fee
+ is hereby granted,
+ provided that the above copyright notice appear
+ in all copies
+ and that both that copyright notice and this permission notice appear
+ in supporting documentation,
+ and that the name of Digital not be used
+ in advertising or publicity pertaining to distribution of the software
+ without specific, written prior permission.
+ .
+ DIGITAL DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE,
+ INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS,
+ IN NO EVENT SHALL DIGITAL BE LIABLE
+ FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES
+ OR ANY DAMAGES WHATSOEVER
+ RESULTING FROM LOSS OF USE, DATA OR PROFITS,
+ WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,
+ ARISING OUT OF OR IN CONNECTION WITH
+ THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+License: GPL-2+
+License-Reference: /usr/share/common-licenses/GPL-2
+
+License: GPL-3+
+License-Reference: /usr/share/common-licenses/GPL-3
+
+License: LGPL-2.1+
+License-Reference: /usr/share/common-licenses/LGPL-2.1
+
+License: OFL-1.1
+ PREAMBLE
+ .
+ The goals of the Open Font License (OFL) are
+ to stimulate worldwide development of collaborative font projects,
+ to support the font creation efforts
+ of academic and linguistic communities,
+ and to provide a free and open framework
+ in which fonts may be shared and improved in partnership with others.
+ .
+ The OFL allows the licensed fonts
+ to be used, studied, modified and redistributed freely
+ as long as they are not sold by themselves.
+ The fonts, including any derivative works,
+ can be bundled, embedded, redistributed and/or sold with any software
+ provided that any reserved names are not used by derivative works.
+ The fonts and derivatives, however, cannot be released
+ under any other type of license.
+ The requirement for fonts to remain under this license
+ does not apply to any document
+ created using the fonts or their derivatives.
+ .
+ DEFINITIONS
+ .
+ "Font Software" refers to the set of files released
+ by the Copyright Holder(s) under this license
+ and clearly marked as such.
+ This may include source files, build scripts and documentation.
+ .
+ "Reserved Font Name" refers to any names specified as such
+ after the copyright statement(s).
+ .
+ "Original Version" refers to the collection of Font Software components
+ as distributed by the Copyright Holder(s).
+ .
+ "Modified Version" refers to any derivative
+ made by adding to,deleting,
+ or substituting -- in part or in whole -- any of the components
+ of the Original Version,
+ by changing formats
+ or by porting the Font Software to a new environment.
+ .
+ "Author" refers to any designer, engineer, programmer, technical writer
+ or other person who contributed to the Font Software.
+ .
+ PERMISSION & CONDITIONS
+ .
+ Permission is hereby granted, free of charge,
+ to any person obtaining a copy of the Font Software,
+ to use, study, copy, merge, embed, modify, redistribute,
+ and sell modified and unmodified copies of the Font Software,
+ subject to the following conditions:
+  1) Neither the Font Software nor any of its individual components,
+     in Original or Modified Versions,
+     may be sold by itself.
+  2) Original or Modified Versions of the Font Software
+     may be bundled, redistributed and/or sold with any software,
+     provided that each copy contains
+     the above copyright notice and this license.
+     These can be included
+     either as stand-alone text files, human-readable headers
+     or in the appropriate machine-readable metadata fields
+     within text or binary files
+     as long as those fields can be easily viewed by the user.
+  3) No Modified Version of the Font Software
+     may use the Reserved Font Name(s)
+     unless explicit written permission is granted
+     by the corresponding Copyright Holder.
+     This restriction only applies to the primary font name
+     as presented to the users.
+  4) The name(s) of the Copyright Holder(s)
+     or the Author(s) of the Font Software
+     shall not be used to promote, endorse or advertise
+     any Modified Version,
+     except to acknowledge the contribution(s)
+     of the Copyright Holder(s) and the Author(s)
+     or with their explicit written permission.
+  5) The Font Software,
+     modified or unmodified, in part or in whole,
+     must be distributed entirely under this license,
+     and must not be distributed under any other license.
+     The requirement for fonts to remain under this license
+     does not apply to any document created using the Font Software.
+ .
+ TERMINATION
+ .
+ This license becomes null and void
+ if any of the above conditions are not met.
+ .
+ DISCLAIMER
+ .
+ THE FONT SOFTWARE IS PROVIDED "AS IS",
+ WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+ INCLUDING BUT NOT LIMITED TO
+ ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE
+ AND NONINFRINGEMENT OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT.
+ IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE
+ FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL,
+ OR CONSEQUENTIAL DAMAGES,
+ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ ARISING FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE
+ OR FROM OTHER DEALINGS IN THE FONT SOFTWARE.
+
+License: W3C
+ By obtaining and/or copying this work, you (the licensee) agree
+ that you have read, understood, and will comply
+ with the following terms and conditions.
+ .
+ Permission to copy, modify, and distribute this work,
+ with or without modification,
+ for any purpose and without fee or royalty
+ is hereby granted,
+ provided that you include the following
+ on ALL copies of the work or portions thereof,
+ including modifications:
+ .
+  * The full text of this NOTICE
+    in a location viewable to users
+    of the redistributed or derivative work.
+  * Any pre-existing intellectual property disclaimers,
+    notices, or terms and conditions.
+    If none exist,
+    the W3C Software and Document Short Notice should be included.
+  * Notice of any changes or modifications,
+    through a copyright statement on the new code or document
+    such as "This software or document includes material
+    copied from or derived from [title and URI of the W3C document].
+    Copyright (C) [YEAR] W3C(R) (MIT, ERCIM, Keio, Beihang)."
+ .
+ Disclaimers
+ .
+ THIS WORK IS PROVIDED "AS IS,"
+ AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES,
+ EXPRESS OR IMPLIED,
+ INCLUDING BUT NOT LIMITED TO,
+ WARRANTIES OF MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE
+ OR THAT THE USE OF THE SOFTWARE OR DOCUMENT WILL NOT INFRINGE
+ ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
+ .
+ COPYRIGHT HOLDERS WILL NOT BE LIABLE
+ FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES
+ ARISING OUT OF ANY USE OF THE SOFTWARE OR DOCUMENT.
+ .
+ The name and trademarks of copyright holders may NOT be used
+ in advertising or publicity pertaining to the work
+ without specific, written prior permission.
+ Title to copyright in this work will at all times remain
+ with copyright holders.
+
+License: X11~TOG
+ Permission to use, copy, modify, distribute, and sell
+ this software and its documentation
+ for any purpose
+ is hereby granted without fee,
+ provided that the above copyright notice appear in all copies
+ and that both that copyright notice and this permission notice appear
+ in supporting documentation.
+ .
+ The above copyright notice and this permission notice
+ shall be included
+ in all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS",
+ WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+ INCLUDING BUT NOT LIMITED TO
+ THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE
+ AND NONINFRINGEMENT.
+ IN NO EVENT SHALL THE OPEN GROUP BE LIABLE
+ FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
+ OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ .
+ Except as contained in this notice,
+ the name of The Open Group shall not be used
+ in advertising or otherwise to promote
+ the sale, use or other dealings in this Software
+ without prior written authorization from The Open Group.

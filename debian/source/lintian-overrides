@@ -1,0 +1,18 @@
+# License is in License-Reference field (see bug#786450)
+missing-license-paragraph-in-dep5-copyright apache-2\.0 *
+missing-license-paragraph-in-dep5-copyright cc0-1\.0 *
+missing-license-paragraph-in-dep5-copyright gpl-2\+ *
+missing-license-paragraph-in-dep5-copyright gpl-3\+ *
+missing-license-paragraph-in-dep5-copyright lgpl-2\.1\+ *
+missing-license-text-in-dep5-copyright Apache-2\.0 *
+missing-license-text-in-dep5-copyright CC0-1\.0 *
+missing-license-text-in-dep5-copyright GPL-2\+ *
+missing-license-text-in-dep5-copyright GPL-3\+ *
+missing-license-text-in-dep5-copyright LGPL-2\.1\+ *
+
+# False positive, URL is an identifier for a copyright holder
+obsolete-url-in-packaging http://fedorahosted.org/lohit [debian/copyright]
+
+# The German and Japanese translations of old docs were apparently made
+# with the AOLpress/2.0 HTML editor and not generated from Sphinx
+source-is-missing [doc/sphinx/olddocs/old/*/*.html]

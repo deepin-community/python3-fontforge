@@ -1,0 +1,19 @@
+Description: Remove custom library search path (RPATH/RUNPATH)
+ This reverts upstream's preference of setting RPATH/RUNPATH for
+ installed binaries.  Fixes Lintian custom-library-search-path error.
+Author: Anthony Fok <foka@debian.org>
+Origin: vendor
+Forwarded: not-needed
+Last-Update: 2020-11-18
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -38,7 +38,6 @@
+ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/lib)
+ 
+ set_default_build_type(RelWithDebInfo) # Sets CMAKE_BUILD_TYPE
+-set_default_rpath()
+ add_uninstall_target()
+ 
+ # Options

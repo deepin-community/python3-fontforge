@@ -1,0 +1,5 @@
+nox/usr/lib/*/*.so
+nox/usr/lib/python*/
+nox/usr/share/man/
+nox/usr/share/fontforge/python/excepthook.py
+x/usr/lib/*/*.so

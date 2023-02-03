@@ -1,4 +1,62 @@
 #!/usr/bin/make -f
+# -*- makefile -*-
+#export DH_VERBOSE=1
 
+export CONFIG_SHELL=/bin/bash
+export DEB_BUILD_MAINT_OPTIONS := hardening=+all
+
+# For cross-friendly CC variable
+-include /usr/share/dpkg/buildtools.mk
+
+# avoid libtool files in python3-fontforge or fonts in fontforge-common
+export DH_OPTIONS = -X.la -X.ttf
+
+# build with X11 into subdir, to ensure non-X11 build is not missed
+export DH_OPTIONS += -O--builddirectory=build/x
+
+# build with ninja (not make) per upstream recommendation
+export DH_OPTIONS += -O--buildsystem=cmake+ninja
+
+DEB_CONFIGURE_EXTRA_FLAGS = \
+ -DENABLE_MAINTAINER_TOOLS=ON \
+ -DENABLE_WRITE_PFM=ON \
+ -DENABLE_TILE_PATH=ON \
+ -DENABLE_DEBUG_RAW_POINTS=ON \
+ -DENABLE_FONTFORGE_EXTRAS=ON
+
+ifneq (_fontforge-doc,$(filter nodoc,$(DEB_BUILD_OPTIONS))_$(filter fontforge-doc,$(shell dh_listpackages)))
+DEB_CONFIGURE_EXTRA_FLAGS += -DENABLE_DOCS=OFF
+endif
+
+override_dh_auto_configure:
+	dh_auto_configure --builddirectory=build/nox -- \
+		$(DEB_CONFIGURE_EXTRA_FLAGS) -DENABLE_GUI=OFF -DENABLE_DOCS=OFF
+	dh_auto_configure -- \
+		$(DEB_CONFIGURE_EXTRA_FLAGS)
+
+execute_before_dh_auto_build:
+	dh_auto_build --builddirectory=build/nox
+
+override_dh_auto_install:
+	dh_auto_install --builddirectory=build/nox --destdir=debian/tmp/nox
+	dh_auto_install --destdir=debian/tmp/x
+
+override_dh_install:
+	dh_install --package=fontforge-nox --sourcedir=debian/tmp/nox
+	dh_install --remaining-packages --sourcedir=debian/tmp/x
+
+override_dh_installdocs:
+	dh_installdocs --all -- README.md AUTHORS
+
+override_dh_installman:
+	dh_installman --sourcedir=debian/tmp/x
+
+override_dh_missing-indep:
+	dh_missing -i --list-missing
+
+override_dh_strip:
+	dh_strip --dbgsym-migration='fontforge-dbg (<< 1:20170731~dfsg-2~)'
+
+# track symbols using pkgkde-symbolshelper
 %:
-	dh $@
+	dh $@ --with pkgkde_symbolshelper
