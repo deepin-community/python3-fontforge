@@ -1,0 +1,37 @@
+From: Vasudev Kamath <vasudev@copyninja.info>
+Date: Tue, 5 Nov 2019 19:48:04 +0900
+Subject: Avoid links in html documents potentially breaching privacy
+
+Replace potential tracking image URLs with inline single-pixel
+transparent image from
+<https://css-tricks.com/snippets/html/base64-encode-of-1x1px-transparent-gif/>.
+
+Strip hardcoded host from demo form.
+
+Forwarded: not-needed
+Last-Update: 2017-09-23
+---
+ doc/html/bibliography.html     | 4 ++--
+ doc/html/fontimage.html        | 2 +-
+ doc/html/index.html            | 4 ++--
+ doc/html/pfaeditchangelog.html | 3 ++-
+ 4 files changed, 7 insertions(+), 6 deletions(-)
+
+--- a/doc/sphinx/appendices/bibliography.rst
++++ b/doc/sphinx/appendices/bibliography.rst
+@@ -274,13 +274,13 @@
+ FontForge
+ ^^^^^^^^^
+ 
+-* .. image:: http://images-eu.amazon.com/images/P/284177273X.08.MZZZZZZZ.jpg
++* .. image:: data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7
+      :align: left
+      :alt: Fontes et Codages
+ 
+   `Haralambous, Yannis, 2004, Fontes & Codages <http://www.amazon.fr/exec/obidos/ASIN/284177273X/qid%3D1096481415/402-5423443-8577732>`__
+ 
+-* .. image:: http://images.amazon.com/images/P/0596102429.01._AA240_SCLZZZZZZZ_V40077239_.jpg
++* .. image:: data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7
+      :align: left
+      :alt: Fontes et Codages
+ 

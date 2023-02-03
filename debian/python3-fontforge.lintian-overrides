@@ -1,0 +1,4 @@
+# Lintian fails to find libfontforge.so.4 from the libfontforge4 package
+# and thus raises false library-not-linked-against-libc errors.
+python3-fontforge: library-not-linked-against-libc [usr/lib/python3/dist-packages/fontforge.cpython-*.so]
+python3-fontforge: library-not-linked-against-libc [usr/lib/python3/dist-packages/psMat.cpython-*.so]

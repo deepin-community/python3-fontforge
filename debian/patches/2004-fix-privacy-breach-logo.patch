@@ -1,0 +1,60 @@
+Description: Remove link to remote SourceForge logo from Japanese documentation
+ Also image link to upstream author George Williams’s now defunct old website,
+ and image link to thunbmail of « Fontes & codages » on Amazon. 
+ Fixes Lintian privacy-breach-logo error.
+Author: Anthony Fok <foka@debian.org>
+Origin: vendor
+Forwarded: not-needed
+Last-Update: 2020-11-23
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/doc/sphinx/olddocs/old/ja/index.html
++++ b/doc/sphinx/olddocs/old/ja/index.html
+@@ -11,9 +11,7 @@
+ <BODY>
+ <DIV id="in">
+   <H1 ALIGN=Center>
+-    <IMG src="../../_images/fftype32.png" WIDTH="32" HEIGHT="32" ALIGN="Left"><A href="http://sourceforge.net"><IMG
+-	src="http://sourceforge.net/sflogo.php?group_id=25752&amp;type=1" width="88"
+-	height="31" border="0" alt="SourceForge Logo" ALIGN=right> </A> FontForge
++    <IMG src="../../_images/fftype32.png" WIDTH="32" HEIGHT="32" ALIGN="Left"> FontForge
+   </H1>
+ <!--   <P ALIGN=Center>
+   <FONT COLOR="Red"><BIG><B>I will not be responding to bug reports/feature
+@@ -1085,13 +1083,6 @@
+   </UL>
+   <P ALIGN=Center>
+   <P ALIGN=Center>
+-  <A HREF="http://bibliofile.duhs.duke.edu/gww/FreeWare/MyToys.html"><IMG SRC="http://bibliofile.duhs.duke.edu/gww/FreeWare/../uparrow.gif"
+-      WIDTH="30" HEIGHT="30"></A> <A href="http://sourceforge.net">
+-<!--
+-  <IMG src="http://sourceforge.net/sflogo.php?group_id=25752&amp;type=1" width="88"
+-      height="31" border="0" alt="SourceForge Logo"> </A>-->
+-  <IMG src="http://sourceforge.net/sflogo.php?group_id=25752&amp;type=1" width="88"
+-      height="31" border="0" alt="SourceForge ロゴ"> </A>
+ </DIV>
+ </BODY></HTML>
+   
+--- a/doc/sphinx/olddocs/old/ja/pfaeditchangelog.html
++++ b/doc/sphinx/olddocs/old/ja/pfaeditchangelog.html
+@@ -6850,8 +6850,7 @@
+ 	to work (as well as for what I fixed yesterday)
+       <LI>
+ 	(moved to
+-	<A href="http://sourceforge.net"><IMG SRC="http://sourceforge.net/sflogo.php?group_id=25752&amp;type=1"
+-	    WIDTH="88" HEIGHT="31" BORDER="0" ALT="SourceForge Logo"></A>)
++	<A href="http://sourceforge.net">SourceForge</A>)
+     </UL>
+   <LI>
+ <!--22 Apr 2001-->
+--- a/doc/sphinx/olddocs/old/ja/bibliography.html
++++ b/doc/sphinx/olddocs/old/ja/bibliography.html
+@@ -578,8 +578,6 @@
+     <A NAME="FontForge">FontForge</A>
+   </H3>
+   <P>
+-  <IMG src="http://images-eu.amazon.com/images/P/284177273X.08.MZZZZZZZ.jpg"
+-      width=102 height=140 vspace=3 hspace=5 align=left border=0 alt="Fontes et Codages">
+   <A HREF="http://www.amazon.fr/exec/obidos/ASIN/284177273X/qid%3D1096481415/402-5423443-8577732">Haralambous,
+   Yannis, 2004, <I>Fontes &amp; Codages</I></A><BR Clear=All>
+   <H3>
